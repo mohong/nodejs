@@ -1,9 +1,5 @@
-/**
- * Created by mohong on 2016/10/16.
- */
-/*
- 创建一个http服务
- */
+// 创建一个http服务
+
 'use strict';
 
 const http = require('http');
