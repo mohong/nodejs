@@ -5,21 +5,34 @@
 const request = require('request');
 const cheerio = require('cheerio');
 const message = require('./message');
+const async = require('async');
+
 
 const option = {
     url: 'http://127.0.0.1:8080/jQuerytest/index.html'
 };
 
-function callback(error,response,body) {
-    if (!error && response.statusCode == 200){
-        acquireData(body);
+let urls = [];
+urls.push(option.url);
+
+//控制并发量
+async.eachSeries(urls,(url) => {
+    request(url,(error,response,body) => {
+        if (!error && response.statusCode == 200){
+            acquireData(body);
+        } else {
+            console.log('连接失败');
+        }
+    });
+},(error) => {
+    if (error){
+        throw error;
     } else {
-        console.log('连接失败');
+        console.log('爬虫开始爬取数据');
     }
-}
+})
 
-request(option,callback);
-
+//获取数据
 function acquireData(data) {
     const $ = cheerio.load(data);
     let medias = $('.media').toArray();
