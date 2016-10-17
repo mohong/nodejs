@@ -4,6 +4,7 @@
 
 const request = require('request');
 const cheerio = require('cheerio');
+const message = require('./message');
 
 const option = {
     url: 'http://127.0.0.1:8080/jQuerytest/index.html'
@@ -24,14 +25,13 @@ function acquireData(data) {
     let medias = $('.media').toArray();
     for (let item in medias){
         let media = medias[item];
+
         let title = $('h4',media).text();
         let content = $('p',media).text();
         let link = $('img',media).attr('src');
 
-        console.log('======================');
-        console.log('title:'+title);
-        console.log('content:'+content);
-        console.log('link:'+link);
+        message.addMessage(title,content,link);
+
     }
 
 }
