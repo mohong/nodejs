@@ -17,6 +17,9 @@ http.createServer((req,res)=>{
         case '/movie':
             resIndex(res);
             break;
+        case '/image':
+            resImage(res);
+            break;
         default:
             resDefault(res);
             break;
@@ -30,11 +33,18 @@ http.createServer((req,res)=>{
     }
 });
 
-
+//响应html
 function resIndex(res) {
     let readPath = path.join(__dirname,'./html/index.html');
     let indexPage = fs.readFileSync(readPath);  //读取文件
     res.writeHead(200,{'content-Ttpe':'text/html'});
+    res.end(indexPage);
+}
+//响应图片
+function resImage(res) {
+    let readPath = path.join(__dirname,'./img/nkns.jpg');
+    let indexPage = fs.readFileSync(readPath);
+    res.writeHead(200,{'content-Type':'image/jpg'});
     res.end(indexPage);
 }
 
