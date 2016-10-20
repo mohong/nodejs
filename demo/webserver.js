@@ -37,7 +37,7 @@ http.createServer((req,res)=>{
 function resIndex(res) {
     let readPath = path.join(__dirname,'./html/index.html');
     let indexPage = fs.readFileSync(readPath);  //读取文件
-    res.writeHead(200,{'content-Ttpe':'text/html'});
+    res.writeHead(200,{'content-Type':'text/html'});
     res.end(indexPage);
 }
 //响应图片
