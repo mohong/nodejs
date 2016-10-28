@@ -180,3 +180,85 @@ break表示终止掉循环，continue表示只终止本次循环。
 		-  indexOf()  /  lastIndexOf()
 		-  every() / some() / forEach() / filter() / map()
 		-  reduce() / reduceRight()
+
+## 基础知识
+### nodejs的特点
+- 部署简单方便
+- 事件驱动
+- 异步编程
+- 高效与性能
+- 单线程与多进程
+- 缺点
+	- 大量采用匿名函数，使得抛出的异常不易阅读
+	- 无法使用try/catch，使得异常捕获较为复杂
+	- 单线程的可靠性问题
+	- 不适合CPU密集型的场景
+	- 回调代码影响阅读
+
+### 异步的实现方式
+- 回调函数
+- 事件监听
+- 订阅/发布模式
+
+### 开发环境
+- VirtualBox
+	- 如果电脑连接的是路由器，虚拟机网络连接选择“桥接连接”
+	- 安装时安装英文版
+	- 选择安装的软件software selection，左边'basic web server'，右边选'development tools'
+	- 选择安装的硬盘installation destination，只显示之前创建的8G盘，需要取消一下，再选中
+- CentOS
+	- 网卡配置：修改/etc/sysconfig/network-scripts/ifcfg-enp0s3文件中的最后一行`ONBOOT`的值为yes。重启
+	- 修改windows的host文件，映射linux的ip
+	- yum install epel-release (给安装node做准备)
+- xshell (PUTTY)
+- xftp (WinSCP)
+- nodejs: yum install nodejs
+- mongodb: 检查是否成功安装： mongo --version
+	- 服务端：yum install mongodb-server
+	- 客户端： yum install mongodb
+- redis: yum install redis   检查是否成功安装:redis-cli --version
+
+### 开发工具
+- sublime text 
+	- sftp : 将本地文件同步到服务器的插件
+- webstorm
+- npm与调试工具
+	- npm
+		- 修改源 
+		npm config set strict-ssl false
+		npm install -g cnpm --registry=https://registry.npm.taobao.org
+	- nodemon ： 监视源文件，当有改变时自动重启应用并执行
+		- 安装：cnpm install -g nodemon
+		- 使用：nodemon index.js
+	- pm2
+		- cnpm install -g pm2
+	- node-inspector： 调试长时间开启的应用，如http服务
+		- 安装：cnpm install -g node-inspector
+		- 使用：
+			- 关闭服务器防火墙（粗暴）：systemctl stop firewalld
+			- nodemon --debug app.js
+			- node-inspector
+	- chrome developer tools
+
+### 常用的linux命令
+- 文件与文件夹的操作
+	- 删除文件 rm filename
+	- 删除文件夹及下面的文件  rm -rf dirname
+	- 最直接的操作 rm -rf name
+- 系统管理
+	- 任务管理器 top , q:退出
+	- 查看进程 ps aux,
+	- 查看包含ssh的进程 ps aux | grep ssh
+	- 查看当前网络配置： ifconfig
+	- 系统控制命令 systemctl : 如重启网络 systemctl restart network
+- vi
+	- 查看模式
+	默认是此模式，
+	- 编辑模式
+	查看模式下，按i键进入编辑模式，此时界面下方出现'insert'，按insert键可切换到替换模式
+	- 命令模式
+	查看模式下或者编辑模式下按":"可进入命令模式
+		- q : 只退出不保存
+		- w : 只保存不退出
+		- wq : 保存并退出
+	
