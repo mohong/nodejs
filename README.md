@@ -307,3 +307,28 @@ break表示终止掉循环，continue表示只终止本次循环。
 			- 发布消息： publish 
 
 - Mongodb
+	- 基本使用
+		- 特点
+			- 使用BSON存储数据
+			- 支持相对丰富的查询操作
+			- 支持索引
+			- 副本集
+			- 分片
+			- 无模式
+			- 部署简单方便
+		- 服务的启动
+			- MongoDB运行的两种方式
+				- 启动命令的使用：
+					- 创建目录 mkdir -p /data/db
+					- mongod --dbpath=/data/db --port=27017 (只在控制台启动)
+					- mongod --dbpath=/data/db --port=27017 --fork --syslog (以守护进程的方式启动)
+					- mongod --dbpath=/data/db --port=27017 --fork --logpath=/var/log/mongo.log (以守护进程的方式启动,并指定其日志)
+				- 查看日志：tail -f /var/log/mongo.log
+				- 结束后台命令：mongod --shutdown
+		- 命令行工具的基本使用
+			- 连接： mongo 127.0.0.1:27017
+			- 基本指令：
+				- show dbs  查看当前数据库
+				- use part9  使用part9数据库，可以是不存在的数据库
+				- db.users.insert({"username": "mohong"});
+				- show collections   查看集合
