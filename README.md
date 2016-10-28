@@ -245,6 +245,7 @@ break表示终止掉循环，continue表示只终止本次循环。
 	- 删除文件 rm filename
 	- 删除文件夹及下面的文件  rm -rf dirname
 	- 最直接的操作 rm -rf name
+	
 - 系统管理
 	- 任务管理器 top , q:退出
 	- 查看进程 ps aux,
@@ -261,6 +262,7 @@ break表示终止掉循环，continue表示只终止本次循环。
 		- q : 只退出不保存
 		- w : 只保存不退出
 		- wq : 保存并退出
+		- ?： 搜索,后面跟搜索关键字
 
 ### 后端简介
 - 状态码
@@ -273,4 +275,33 @@ break表示终止掉循环，continue表示只终止本次循环。
 - 获取request携带的信息
 	- 通过url模块方便获取
 	- 框架中有自己的获取方式
-	
+
+## 数据库
+- Redis
+	- 基本介绍
+		- 缓存系统
+		- 数据存储
+		- 消息中介
+	- 基本工具
+		- 服务启动工具
+		 	- 修改配置文件，让其以守护进程的方式启动：vi /etc/redis.conf，修改daemonize为yes (可通过 '?daemonize no' 快速定位),然后启动： redis-server /etc/redis.conf
+		- 命令行客户端工具
+			- 命令行连接redis: redis-cli
+			- [操作命令](http://redis.io/commands)
+				- keys ： 查看当前存储的键 如查看所有的键： keys *
+				- set : 存入键值对，如： set name zhangsan
+				- get : 取出指定键对应的值 ，如： get name ，  返回："zhang"
+		- GUI工具
+	- 基本使用
+		- 存储和获取值
+			- set
+			- get
+		- 列表
+		  - lpush / rpush 
+		  - lpop / rpop
+		- 集合
+		  - sadd  
+		  - smembers
+		- 消息中介
+			- 订阅消息： subscribe , 并且通过on监听
+			- 发布消息： publish 
