@@ -332,3 +332,26 @@ break表示终止掉循环，continue表示只终止本次循环。
 				- use part9  使用part9数据库，可以是不存在的数据库
 				- db.users.insert({"username": "mohong"});
 				- show collections   查看集合
+				- db.users.find()   查看集合中的文档
+				- db.users.find().count()  查看集合中文档的数量
+				- db.users.update()  更新
+					- db.users.update({"username":"mohong"},{$set: {"group":"writer"}}) 只更新一条
+					- db.users.update({"username":"mohong"},{$set: {"group":"writer"}},{multi:true});  更新所有满足的值
+				- db.users.save()   更新,必须指定所有值，不然不保留
+					- db.users.save({"_id":ObjectId("5813843684d167cf492b6029"),"group":"design"})
+				- db.users.remove()  删除
+					- db.users.remove({"group":"design"})  删除满足条件的所有文档
+					- db.users.remove({"group":"design"}， true) 只删除集合中满足条件的第一个文档
+				- db.users.drop()  删除集合
+
+	- 使用mongoose操作mongodb
+		- 安装： cnpm install mongoose
+		- 连接： 
+			- var uri = "mongodb://username:password@hostname:port/databasesname" ;
+			- 简化一下： uri = "mongodb://localhost/databasesname" ;
+		- schema model
+			mongoose模块用来建立js中的对象和mongodb中的文档的对应关系， schema用来定义mongodb文档的结构和数据类型，通过操作model，可以增删改查mongodb中的文档
+		- 创建文档
+		- 删除文档
+		- 简单查询
+		- 条件语句
