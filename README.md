@@ -57,7 +57,7 @@ configurable为true时表示可以通过delete删除，否则不能。
 	其它所有值都会转换成true。
 - 复杂数据类型：Object
   - 成员：值或者函数
-  - type：
+  - typeof：
     是操作符，不是函数，检查数据类型或结果，
     检查结果：undefined,boolean,string,number,object,function
 
@@ -110,7 +110,7 @@ break表示终止掉循环，continue表示只终止本次循环。
 - 基本包装类型
 	- Number()
 		- toFixed(2) 保留两位有效数字
-		- toExponential  转换为科学计数法
+		- toExponential()  转换为科学计数法
 
 	- String()
 		- slice(index1,index2) 从index1的位置开始截取，到index2的位置介绍，不包含index2
@@ -355,3 +355,23 @@ break表示终止掉循环，continue表示只终止本次循环。
 		- 删除文档
 		- 简单查询
 		- 条件语句
+	- mongoose使用进阶
+		- 模式的扩展
+			- 默认值的类型
+				- 固定值
+				- 即时生成
+			- 模式修饰符
+				- 预定义的模式修饰符
+				- 自定义setter修饰符
+				- 自定义getter修饰符
+			- 虚拟属性
+				- Schema.virtual()
+				- 转换为JSON()
+			- 索引
+				- 唯一索引
+				- 辅助索引（为了增加查询速度）
+		- 模型的方法
+			- 自定义静态方法
+			- 自定义实例方法
+		- 数据的校验
+		- 中间件DBRef
