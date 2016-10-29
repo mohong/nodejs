@@ -374,4 +374,7 @@ break表示终止掉循环，continue表示只终止本次循环。
 			- 自定义静态方法
 			- 自定义实例方法
 		- 数据的校验
-		- 中间件DBRef
+			- 预定义的验证器： required,Number(max,min),String(enum,match)
+			- 自定义验证器
+		- 中间件
+		- DBRef
