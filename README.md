@@ -379,6 +379,22 @@ break表示终止掉循环，continue表示只终止本次循环。
 		- 中间件
 		- DBRef
 
+## 框架
+### Express
+- 安装 npm install express --save
+- expressjs中的request  eg:http://localhost:3000/hello
+```
+  request = {
+	method:'GET',
+	path:'/hello',
+	headers:{
+		'Content-Type':'application/json',
+		......
+	},
+	body:{}
+  };
+```
+
 ## 实战项目
 ### CMS内容管理系统
 - 项目的初始化、文件结构和模块管理
