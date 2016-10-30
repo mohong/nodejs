@@ -411,9 +411,15 @@ break表示终止掉循环，continue表示只终止本次循环。
 
 
 - 在前端渲染模板
-	- `<script src="ejs.js"></script>`
-	- ejs.render(tmpl,data);
+	```
+<script src="ejs.js"></script>
+ejs.render(tmpl,data);
+    ```
 
+### API设计原则
+- 不要让用户使用关键字new，
+- 保持简洁
+- 不要轻易的输出接口
 
 
 ## 实战项目
