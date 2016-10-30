@@ -388,4 +388,10 @@ break表示终止掉循环，continue表示只终止本次循环。
 	- 项目的初始化
 		- 规范的package.json文件
 		- 规范的bower.json文件
+		- 模块化
+			- 遵照MVC模式
+			- 使用module.exports或者exports
 	- 模块的组织与管理
+- 实战过程
+	- 使用npm初始化项目
+	- Express
