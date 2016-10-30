@@ -24,6 +24,6 @@ function $require(id) {
 }
 
 
-//测试$require函数
-var module1 = $require('./module/module1.js');
-module1.say('hello node');
+//测试$require函数  代码提示总是提示到这个变量，所以我把下面两行注释掉了
+//var module1 = $require('./module/module1.js');
+//module1.say('hello node');

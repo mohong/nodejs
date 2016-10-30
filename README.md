@@ -252,6 +252,7 @@ break表示终止掉循环，continue表示只终止本次循环。
 	- 查看包含ssh的进程 ps aux | grep ssh
 	- 查看当前网络配置： ifconfig
 	- 系统控制命令 systemctl : 如重启网络 systemctl restart network
+	- 矫正服务器时间： ntpdate pool.ntp.org
 - vi
 	- 查看模式
 	默认是此模式，
