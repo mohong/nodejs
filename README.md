@@ -395,6 +395,27 @@ break表示终止掉循环，continue表示只终止本次循环。
   };
 ```
 
+- body-parser  解析body
+	- bodyParser.json()  解析json
+	- bodyParser.urlencoded()  解析url路径为json对象格式
+
+
+- Content-Type  告诉客户端以什么格式来显示数据
+	- Content-Type:text/html  以html的格式显示
+
+
+### 模板引擎
+- ejs http://ejs.co
+	- npm install ejs --save
+	- app.set('view engine','ejs');
+
+
+- 在前端渲染模板
+	- `<script src="ejs.js"></script>`
+	- ejs.render(tmpl,data);
+
+
+
 ## 实战项目
 ### CMS内容管理系统
 - 项目的初始化、文件结构和模块管理

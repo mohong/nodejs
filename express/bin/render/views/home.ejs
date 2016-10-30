@@ -8,5 +8,15 @@
 
 <h1>ejs模板生成的页面</h1>
 <h1>Hi,<%= name %></h1>
+<h1>id:<%= id %></h1>
+
+<div id="template"></div>
+
 </body>
+<script type="text/javascript" src="/views/ejs.min.js"></script>
+<script type="text/javascript">
+    var temp = '<p>前端使用了ejs模板引擎</p>';
+    var newTemp = document.getElementById('template');
+    newTemp.innerHTML = ejs.render(temp);
+</script>
 </html>

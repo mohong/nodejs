@@ -9,9 +9,16 @@ var app = express();
 app.set('view engine','ejs');
 app.set('views',__dirname + '/views');
 
+app.use(express.static(__dirname));
+
 app.get('/',function (req,res) {
     res.render('home.ejs',{name:'mohong'});
 });
 
-app.listen(3000);
+app.get('/request/:id',function (req,res) {
+    var locals = {name: 'mohong', id: req.params['id']};
+    res.render('home.ejs',locals);
+});
+
+app.listen(3001);
 console.log('server start')
