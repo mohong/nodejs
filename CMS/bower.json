@@ -1,0 +1,20 @@
+{
+  "name": "cms",
+  "description": "a simple cms system",
+  "main": "index.html",
+  "authors": [
+    "mohong"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "cms"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

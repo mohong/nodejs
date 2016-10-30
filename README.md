@@ -265,6 +265,11 @@ break表示终止掉循环，continue表示只终止本次循环。
 		- wq : 保存并退出
 		- ?： 搜索,后面跟搜索关键字
 
+- curl : 利用URL语法在命令行方式下工作的开源文件传输工具,它被广泛应用在Unix、多种Linux发行版中
+	- 发送get请求：`http://localhost:7101/news`
+	- 发送post请求：`curl -X POST -H 'Content-Type: application/json' -d '{"title": "test title","content":"test content"}' localhost:7101/news`
+
+
 ### 后端简介
 - 状态码
 	- 301 302 重定向，后面会跟一个Location头，指明跳转位置
@@ -437,5 +442,9 @@ ejs.render(tmpl,data);
 			- 使用module.exports或者exports
 	- 模块的组织与管理
 - 实战过程
-	- 使用npm初始化项目
-	- Express
+	- 后端
+		- 使用npm初始化项目
+		- Express
+
+	- 前端
+		- bower修改默认安装包的路径：在项目根目录下：`vim .bowerrc`（内容是空的），添加json配置信息`{"directory":"public/lib"}`
