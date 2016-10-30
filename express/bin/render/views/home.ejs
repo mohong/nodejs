@@ -17,6 +17,13 @@
 <script type="text/javascript">
     var temp = '<p>前端使用了ejs模板引擎</p>';
     var newTemp = document.getElementById('template');
-    newTemp.innerHTML = ejs.render(temp);
+    //newTemp.innerHTML = ejs.render(temp);
+
+    //增加一个定时器
+    setTimeout(function () {
+        newTemp.innerHTML = ejs.render(temp);
+    },2000);
+
+
 </script>
 </html>
