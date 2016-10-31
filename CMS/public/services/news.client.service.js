@@ -40,7 +40,7 @@ function NewsService($http, $q) {
             return handleRequest('POST','/news',data);
         },
         detail: function (id) {
-            return handleRequest('GET','/news' + id);
+            return handleRequest('GET','/news/' + id);
         }
     }
 }
