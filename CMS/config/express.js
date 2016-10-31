@@ -13,7 +13,7 @@ module.exports = function () {
     app.use(bodyParser.json());
 
     //添加静态文件
-    app.use(express.static("./public"));
+    app.use(express.static("../public"));
 
     require('../app/routes/news.server.routes')(app);
 

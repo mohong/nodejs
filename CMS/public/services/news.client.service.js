@@ -1,9 +1,10 @@
 /**
  * 新闻-客户端-服务
+ * 负责与服务器的通信
  * Created by mohong on 2016/10/31.
  */
 angular.module('webapp')
-    .service("NewsService",['$http',"q",NewsService]);
+    .service("NewsService",['$http',"$q",NewsService]);
 
 function NewsService($http, $q) {
     

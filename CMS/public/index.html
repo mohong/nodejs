@@ -5,7 +5,19 @@
     <title>news-cms</title>
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css">
 </head>
-<body>
+<body ng-app="webapp">
+<div class="container" ng-controller="NewsController">
+    <h2>News</h2>
+    <div class="row" ng-repeat="news in list">
+        <div class="col-sm-2">
+            <small ng-bind="news.createTime"></small>
+        </div>
+        <div class="col-sm-10">
+            {{news.title}}
+        </div>
+    </div>
+</div>
+
 
 
 <script src="lib/angular/angular.js"></script>
@@ -13,5 +25,6 @@
 <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
 <script src="webapp.js"></script>
 <script src="services/news.client.service.js"></script>
+<script src="controllers/news.client.controller.js"></script>
 </body>
 </html>
