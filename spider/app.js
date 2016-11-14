@@ -5,12 +5,14 @@ var cheerio = require('cheerio');
 
 
 app.get('/', function(req, res){
-  request('http://www.jikexueyuan.com', function (error, response, body) {
+  request('http://arthas.com.cn', function (error, response, body) {
     if (!error && response.statusCode == 200) {
      var $ = cheerio.load(body);
+        console.log(body);
       res.send('hello world');
     }
   })
 });
 
-app.listen(3000);
+app.listen(4000);
+console.log('server start');
