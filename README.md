@@ -1,11 +1,15 @@
 # nodejs
 ## nodejs网络资源
-- [Nodejs爬虫（妹子图）](http://www.jianshu.com/p/006c754027b2)
+- [Nodejs爬虫](http://www.jianshu.com/p/006c754027b2)
 - [NodeJS中文文档](https://0532.gitbooks.io/nodejs/content/)
 - [前端资源教程](https://cnodejs.org/topic/56ef3edd532839c33a99d00e)
 - [commonjs](http://javascript.ruanyifeng.com/nodejs/module.html)
 - [Mongoose学习参考文档——基础篇](http://cnodejs.org/topic/504b4924e2b84515770103dd)
 - [超强、超详细Redis数据库入门教程](http://www.jianshu.com/p/7e22ad3a9061)
+
+## Nodejs文件上传
+- express4.0官方推荐的上传的中间件[multer](https://github.com/expressjs/multer/blob/master/doc/README-zh-cn.md)
+- [express文件上传中间件Multer最新使用说明(cnode.org)](https://cnodejs.org/topic/564f32631986c7df7e92b0db)
 
 # 学习路线
 ## 预备知识
