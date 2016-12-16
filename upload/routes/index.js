@@ -2,23 +2,17 @@ var express = require('express');
 var router = express.Router();
 
 var muilter = require('../multerUtil');
-
+var UserController = require('../controllers/user');
 
 var path = require('path');
 
 /* GET home page. */
-router.get('/', function (req, res, next) {
-	res.render('index', {title: '上传成功'});
-});
+router.get('/success', UserController.index);
 
-router.get('/upload', function (req, res) {
+router.get('/signup', function (req, res) {
 	res.render('upload', {title: '文件上传'});
 });
 
-router.post('/upload',muilter.single('photo'), function (req, res, next) {
-	console.log(req.file);
-	console.log(req.body);
-	res.redirect('/');
-});
+router.post('/signup',muilter.single('photo'), UserController.signup);
 
 module.exports = router;

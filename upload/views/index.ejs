@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+      <style>
+          li img {
+              width: 200px ;
+              height: 100px;
+          }
+      </style>
   </head>
   <body>
-    <p><%= title %></p>
+    <% users.map(function (user) { %>
+        <ul>
+            <li>用户名：<%= user.username %></li>
+            <li><img src="<%=user.avatar%>" alt=""></li>
+        </ul>
+    <% }) %>
   </body>
 </html>
