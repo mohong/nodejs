@@ -11,6 +11,9 @@
 - express4.0官方推荐的上传的中间件[multer](https://github.com/expressjs/multer/blob/master/doc/README-zh-cn.md)
 - [express文件上传中间件Multer最新使用说明(cnode.org)](https://cnodejs.org/topic/564f32631986c7df7e92b0db)
 
+## 常用的模块
+- [lodash](https://github.com/lodash/lodash)  对数组的各种操作
+
 # 学习路线
 ## 预备知识
 ### 语言基础
