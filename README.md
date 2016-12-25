@@ -11,6 +11,10 @@
 - express4.0官方推荐的上传的中间件[multer](https://github.com/expressjs/multer/blob/master/doc/README-zh-cn.md)
 - [express文件上传中间件Multer最新使用说明(cnode.org)](https://cnodejs.org/topic/564f32631986c7df7e92b0db)
 
+## 数据库
+[mongodb官方文档](https://docs.mongodb.com/manual/)
+[mongoose官方文档](http://www.nodeclass.com/api/mongoose.html#model_Model.find)
+
 ## 常用的模块
 - [lodash](https://github.com/lodash/lodash)  对数组的各种操作
 
